@@ -1,0 +1,3 @@
+mkt() {
+	cd $(command mkt)
+}
