@@ -27,13 +27,13 @@ func main() {
 		if err != nil {
 			panic(err)
 		}
-		f.Truncate(0)
-		f.Seek(0, io.SeekStart)
 		i, err = strconv.Atoi(string(a))
 		if err != nil {
 			panic(err)
 		}
 		i++
+		f.Truncate(0)
+		f.Seek(0, io.SeekStart)
 		_, err = f.Write([]byte(strconv.Itoa(i)))
 		if err != nil {
 			panic(err)
